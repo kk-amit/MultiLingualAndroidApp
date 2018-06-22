@@ -8,7 +8,7 @@ Using this sample project you can perform the following operations in context of
 
 2 - Change Language in middle.
 
-3 - Unit testing with mockito and check the code coverage.
+3 - Unit testing with mockito and check the code coverage. For this sample application presenters are 100% unit testable. 
 
 For this sample application, I am using MVP pattern with Dagger 2 Library. Also, I have used Mockito for unit testing and in this sample application presenters are 100% unit testable(Check the attached code coverage screen-shot).  	
 	
