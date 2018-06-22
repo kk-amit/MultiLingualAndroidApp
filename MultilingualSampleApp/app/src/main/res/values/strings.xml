@@ -7,12 +7,9 @@
     <string name="str_select_language">Select a Language</string>
     <string name="str_selected_language">Selected Language</string>
     <string name="str_select_language_dot">Select a Language :</string>
-    <string name="str_select_language_desc">You can change this in Settings at \nany time.</string>
     <string name="str_select_english">English</string>
     <string name="str_select_tamil">தமிழ்</string>
     <string name="str_select_hindi">हिंदी</string>
-    <string name="str_select_malayalam">മലയാളം</string>
-    <string name="str_select_telugu">తెలుగు</string>
     <string name="str_proceed">Proceed</string>
     <string name="str_title_activity_select_language">SelectLanguageActivity</string>
 

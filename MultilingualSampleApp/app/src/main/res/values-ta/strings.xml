@@ -8,8 +8,6 @@
     <string name="str_select_english">English</string>
     <string name="str_select_tamil">தமிழ்</string>
     <string name="str_select_hindi">हिंदी</string>
-    <string name="str_select_malayalam">മലയാളം</string>
-    <string name="str_select_telugu">తెలుగు</string>
     <string name="str_proceed">மேலே செல்க</string>
     <string name="str_title_activity_select_language">மொழி செயல்பாட்டைத் தேர்ந்தெடுக்கவும்</string>
     <string name="srt_app_desc">இது Android பயன்பாடுகளில் பல மொழி செயல்பாட்டிற்கான மாதிரி திட்டமாகும். \n \n இந்த மாதிரி திட்டத்தைப் பயன்படுத்தி பல மொழிகளின் சூழலில் பின்வரும் செயல்களை செய்யலாம். \n \n1 - பயன்பாட்டு தொடக்கத்தில் மொழியைத் தேர்ந்தெடுங்கள். \n2 - இடையில் மொழியை மாற்றவும். \n \n கூடுதலாக, நான் இந்த டெமோ பயன்பாட்டை காண்பிக்க MVP பெட்டர் உடன் Dagger2 நூலகத்தைப் பயன்படுத்துகிறேன்.</string>

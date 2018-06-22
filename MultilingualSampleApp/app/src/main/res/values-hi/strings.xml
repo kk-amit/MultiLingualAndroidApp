@@ -8,8 +8,6 @@
     <string name="str_select_english">English</string>
     <string name="str_select_tamil">தமிழ்</string>
     <string name="str_select_hindi">हिंदी</string>
-    <string name="str_select_malayalam">മലയാളം</string>
-    <string name="str_select_telugu">తెలుగు</string>
     <string name="str_proceed">बढ़ना</string>
     <string name="str_title_activity_select_language">भाषा गतिविधि का चयन करें</string>
     <string name="srt_app_desc">एंड्रॉइड एप्लिकेशन में बहुभाषी कार्यक्षमता के लिए यह नमूना परियोजना है। \n \n इस नमूना प्रोजेक्ट का उपयोग करके आप बहु-भाषा के संदर्भ में निम्नलिखित ऑपरेशन कर सकते हैं। \n\n1 - ऐप स्टार्टअप पर भाषा का चयन करें। \n2 - बीच में भाषा बदलें। \n\n इसके अलावा, मैं डैगर 2 लाइब्रेरी का उपयोग कर रहा हूं इस डेमो ऐप को दिखाने के लिए एमवीपी पैटर के साथ।</string>
