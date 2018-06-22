@@ -8,7 +8,7 @@ public class LanguageSettingModel implements LanguageSettingContract.ILanguageSe
 
     private Context context;
 
-    LanguageSettingModel(Context context) {
+    public LanguageSettingModel(Context context) {
         this.context = context;
     }
 

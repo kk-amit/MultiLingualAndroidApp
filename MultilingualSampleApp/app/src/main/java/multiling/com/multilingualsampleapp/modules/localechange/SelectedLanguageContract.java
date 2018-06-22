@@ -12,5 +12,7 @@ public class SelectedLanguageContract {
         void removePresenter();
 
         void openSettingScreen();
+
+        SelectedLanguageContract.ISelectedLanguageView getSelectedLanguageView();
     }
 }

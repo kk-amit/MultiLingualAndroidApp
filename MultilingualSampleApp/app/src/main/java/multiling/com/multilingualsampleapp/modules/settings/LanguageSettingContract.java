@@ -4,13 +4,13 @@ import android.widget.CompoundButton;
 
 public class LanguageSettingContract {
 
-    interface ILanguageSettingView {
+    public interface ILanguageSettingView {
         void onSetCheckView(CompoundButton buttonView, String language);
 
         void onChangeLanguage();
     }
 
-    interface ILanguageSettingPresenter {
+    public interface ILanguageSettingPresenter {
         void addPresenter(LanguageSettingContract.ILanguageSettingView languageSettingView);
 
         void removePresenter();
@@ -19,9 +19,13 @@ public class LanguageSettingContract {
 
         void changeLanguage(String selectedLang);
 
+        LanguageSettingContract.ILanguageSettingView getSettingLanguageView();
+
+        LanguageSettingContract.ILanguageSettingModel getSettingLanguageModel();
+
     }
 
-    interface ILanguageSettingModel {
+    public interface ILanguageSettingModel {
         void selectLanguage(String selectedLang);
     }
 

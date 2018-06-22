@@ -31,4 +31,14 @@ public class LanguageSettingPresenter implements LanguageSettingContract.ILangua
         languageSettingModel.selectLanguage(selectedLang);
         languageSettingView.onChangeLanguage();
     }
+
+    @Override
+    public LanguageSettingContract.ILanguageSettingView getSettingLanguageView() {
+        return languageSettingView;
+    }
+
+    @Override
+    public LanguageSettingContract.ILanguageSettingModel getSettingLanguageModel() {
+        return languageSettingModel;
+    }
 }

@@ -21,4 +21,9 @@ public class SelectedLanguagePresenter implements SelectedLanguageContract.ISele
             selectedLanguageView.openSettingScreen();
         }
     }
+
+    @Override
+    public SelectedLanguageContract.ISelectedLanguageView getSelectedLanguageView() {
+        return selectedLanguageView;
+    }
 }

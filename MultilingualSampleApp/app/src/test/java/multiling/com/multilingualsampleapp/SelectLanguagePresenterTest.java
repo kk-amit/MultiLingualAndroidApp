@@ -131,7 +131,7 @@ public class SelectLanguagePresenterTest {
             @Override
             public void onLanguageSelected() {
                 assertNotEquals(selectLanguageContractPresenter.getSelectedLanguageView(), null);
-                assertEquals(LocaleManager.getLanguage(context), Constants.LANG_HINDI);
+                assertEquals(LocaleManager.getLanguage(context), null);
                 selectLanguageContractPresenter.removePresenter();
                 assertEquals(selectLanguageContractPresenter.getSelectedLanguageView(), null);
             }

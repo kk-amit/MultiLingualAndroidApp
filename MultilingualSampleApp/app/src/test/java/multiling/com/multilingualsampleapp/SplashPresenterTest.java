@@ -1,11 +1,13 @@
 package multiling.com.multilingualsampleapp;
 
+import android.content.Context;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import multiling.com.multilingualsampleapp.modules.Main.MainContract;
 import multiling.com.multilingualsampleapp.modules.Splash.SplashContract;
+import multiling.com.multilingualsampleapp.modules.Splash.SplashModel;
 import multiling.com.multilingualsampleapp.modules.Splash.SplashPresenter;
 
 import static org.junit.Assert.assertEquals;
@@ -22,11 +24,14 @@ public class SplashPresenterTest {
     private SplashContract.ISplashView splashView;
     private SplashContract.ISplashPresenter splashPresenter;
     private SplashContract.ISplashModel splashModel;
+    private Context context;
+
     @Before
     public void before() {
         System.out.println(this + "\tbefore");
         splashView = mock(SplashContract.ISplashView.class);
-        splashModel = mock(SplashContract.ISplashModel.class);
+        context = mock(Context.class);
+        splashModel = new SplashModel(context);
         splashPresenter = new SplashPresenter(splashModel);
     }
 
@@ -72,4 +77,13 @@ public class SplashPresenterTest {
         splashPresenter.removePresenter();
         assertEquals(splashPresenter.getSplashView(), null);
     }
+
+    @Test
+    public void testSplashgetSelectedLanguage() {
+        splashPresenter.addPresenter(splashView);
+        assertEquals(splashPresenter.getSplashModel().getSelectedLanguage(), null);
+        splashPresenter.removePresenter();
+    }
+
+
 }
