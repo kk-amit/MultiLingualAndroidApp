@@ -9,4 +9,25 @@
     tools:context="multiling.com.multilingualsampleapp.modules.Main.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/srt_app_desc"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/str_start"/>
+
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

@@ -10,10 +10,20 @@ public class SplashPresenter implements SplashContract.ISplashPresenter {
     // Splash screen timer
     private static int SPLASH_TIME_OUT = 3000;
     private SplashContract.ISplashView mSplashView;
+    private SplashContract.ISplashModel splashModel;
+
+    public SplashPresenter(SplashContract.ISplashModel iSplashModel) {
+        this.splashModel = iSplashModel;
+    }
 
     @Override
     public SplashContract.ISplashView getSplashView() {
         return mSplashView;
+    }
+
+    @Override
+    public SplashContract.ISplashModel getSplashModel() {
+        return splashModel;
     }
 
     @Override
@@ -24,8 +34,8 @@ public class SplashPresenter implements SplashContract.ISplashPresenter {
     @Override
     public void init() {
         new Handler().postDelayed(() -> {
-            if (mSplashView != null) {
-                mSplashView.onSplashComplete();
+            if (mSplashView != null && splashModel != null) {
+                mSplashView.onSplashComplete(splashModel.getSelectedLanguage());
             }
         }, SPLASH_TIME_OUT);
     }

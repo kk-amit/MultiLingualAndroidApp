@@ -1,6 +1,33 @@
 <resources>
     <string name="app_name">MultilingualSampleApp</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="str_title_activity_main">MainActivity</string>
 
     <string name="str_splash_screen">Splash Screen</string>
+
+    <string name="str_select_language">Select a Language</string>
+    <string name="str_selected_language">Selected Language</string>
+    <string name="str_select_language_dot">Select a Language :</string>
+    <string name="str_select_language_desc">You can change this in Settings at \nany time.</string>
+    <string name="str_select_english">English</string>
+    <string name="str_select_tamil">தமிழ்</string>
+    <string name="str_select_hindi">हिंदी</string>
+    <string name="str_select_malayalam">മലയാളം</string>
+    <string name="str_select_telugu">తెలుగు</string>
+    <string name="str_proceed">Proceed</string>
+    <string name="str_title_activity_select_language">SelectLanguageActivity</string>
+
+    <string name="srt_app_desc">This is the Sample Project for Multi-lingual Functionality in Android application. \n\nUsing this sample project you can perform the following operations in context of Multi-language.\n\n1 - Select Language on App Startup.\n2 - Change Language in middle.\n\n Also, I am using the Dagger 2 Library with MVP Patters to show case this Demo app.</string>
+
+    <string name="str_start">Start</string>
+    <string name="str_title_activity_selected_language">SelectedLanguageActivity</string>
+    <string name="str_lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.\n\nThe standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</string>
+    <string name="str_title_activity_language_setting">LanguageSettingActivity</string>
+    <string name="str_settings">Setting</string>
+
+    <string name="str_lang_preference_note">Please note that the app will restart in the language of your preference.</string>
+
+    <string name="str_change_language">Change Language</string>
+
+    <string name="str_pls_select_lang">Please Select the Language</string>
+
 </resources>

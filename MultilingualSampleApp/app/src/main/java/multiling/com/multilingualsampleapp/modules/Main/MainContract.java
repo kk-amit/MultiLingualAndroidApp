@@ -7,19 +7,26 @@ package multiling.com.multilingualsampleapp.modules.Main;
 public class MainContract {
 
     public interface IMainView {
+        void onStartBtnClick();
 
+        void onInit();
     }
 
     public interface IMainPresenter {
-        void showData();
 
         void addPresenter(MainContract.IMainView mainView);
-
-        void init();
 
         void removePresenter();
 
         MainContract.IMainView getMainView();
+
+        void startBtnClick();
+
+        void removeMainModel();
+
+        MainContract.IMainModel getMainModel();
+
+        void init();
     }
 
     public interface IMainModel {

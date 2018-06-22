@@ -21,10 +21,24 @@
         </activity>
         <activity
             android:name=".modules.Main.MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="@string/str_title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-
+        <activity
+            android:name=".modules.SelectLanguage.SelectLanguageActivity"
+            android:label="@string/str_title_activity_select_language"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".modules.localechange.SelectedLanguageActivity"
+            android:label="@string/str_title_activity_selected_language"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".modules.settings.LanguageSettingActivity"
+            android:label="@string/str_title_activity_language_setting"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

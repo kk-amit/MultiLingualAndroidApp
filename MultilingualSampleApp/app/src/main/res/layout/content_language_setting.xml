@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".modules.settings.LanguageSettingActivity"
+    tools:showIn="@layout/activity_language_setting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="#BDBDBD"/>
+
+        <LinearLayout
+            android:id="@+id/setting_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/setting_home_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_select_language_dot"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/setting_notification"
+                    android:text="@string/str_select_english"/>
+
+                <CheckBox
+                    android:id="@+id/chEnglish"
+                    style="@style/setting_notification_checkbox"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/setting_notification"
+                    android:text="@string/str_select_tamil"
+                    tools:ignore="MissingPrefix"/>
+
+                <CheckBox
+                    android:id="@+id/chTamil"
+                    style="@style/setting_notification_checkbox"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/setting_notification"
+                    fontPath="fonts/Hindi-Mukta-Regular.ttf"
+                    android:text="@string/str_select_hindi"
+                    tools:ignore="MissingPrefix"/>
+
+                <CheckBox
+                    android:id="@+id/chHindi"
+                    style="@style/setting_notification_checkbox"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:minHeight="80dp"
+                app:cardBackgroundColor="#9Cffffff"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_attention"
+                    android:padding="10dp"
+                    android:text="@string/str_lang_preference_note"
+                    android:textColor="#29231e"
+                    android:textSize="14sp"/>
+
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/changeBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="@string/str_change_language"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

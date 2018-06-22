@@ -2,6 +2,9 @@ package multiling.com.multilingualsampleapp.modules.Splash;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -9,6 +12,7 @@ import multiling.com.multilingualsampleapp.AppApplication;
 import multiling.com.multilingualsampleapp.BaseActivity;
 import multiling.com.multilingualsampleapp.R;
 import multiling.com.multilingualsampleapp.modules.Main.MainActivity;
+import multiling.com.multilingualsampleapp.modules.SelectLanguage.SelectLanguageActivity;
 
 public class SplashActivity extends BaseActivity implements SplashContract.ISplashView {
 
@@ -19,7 +23,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.ISpla
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         AppApplication.getInstance().getMyComponent().inject(this);
     }
 
@@ -42,9 +46,14 @@ public class SplashActivity extends BaseActivity implements SplashContract.ISpla
     }
 
     @Override
-    public void onSplashComplete() {
-        Intent i = new Intent(SplashActivity.this, MainActivity.class);
-        startActivity(i);
+    public void onSplashComplete(String language) {
+        if (TextUtils.isEmpty(language)) {
+            Intent i = new Intent(SplashActivity.this, SelectLanguageActivity.class);
+            startActivity(i);
+        } else {
+            Intent i = new Intent(SplashActivity.this, MainActivity.class);
+            startActivity(i);
+        }
         // close this activity
         finish();
     }

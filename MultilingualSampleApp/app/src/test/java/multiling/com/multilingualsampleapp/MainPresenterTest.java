@@ -3,7 +3,6 @@ package multiling.com.multilingualsampleapp;
 import android.content.Context;
 
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -12,10 +11,12 @@ import multiling.com.multilingualsampleapp.modules.Main.MainContract;
 import multiling.com.multilingualsampleapp.modules.Main.MainModel;
 import multiling.com.multilingualsampleapp.modules.Main.MainPresenter;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.mockito.Mockito.mock;
 
 /**
- * SplashPresenterTest - JUnit test for Splash Screen Presenter.
+ * SplashPresenterTest - JUnit test for Main Screen Presenter.
  */
 
 public class MainPresenterTest {
@@ -30,10 +31,10 @@ public class MainPresenterTest {
     @Before
     public void before() {
         System.out.println(this + "\tbefore");
-        mainModel = new MainModel(context);
-        mainPresenter = new MainPresenter(mainModel);
         context = mock(Context.class);
         mainView = mock(MainContract.IMainView.class);
+        mainModel = new MainModel(context);
+        mainPresenter = new MainPresenter(mainModel);
     }
 
     @After
@@ -45,7 +46,50 @@ public class MainPresenterTest {
     }
 
     @Test
-    public void getDataTest() {
-        Assert.assertNotEquals(1, 2);
+    public void testMainViewNull() {
+        assertEquals(mainPresenter.getMainView(), null);
     }
+
+    @Test
+    public void testMainViewAdd() {
+        mainPresenter.addPresenter(mainView);
+        assertNotEquals(mainPresenter.getMainView(), null);
+    }
+
+    @Test
+    public void testMainViewRemove() {
+        mainPresenter.removePresenter();
+        assertEquals(mainPresenter.getMainView(), null);
+    }
+
+    @Test
+    public void testMainModelNull() {
+        mainPresenter.removeMainModel();
+        assertEquals(mainPresenter.getMainModel(), null);
+    }
+
+    @Test
+    public void testMainModelAdd() {
+        assertNotEquals(mainPresenter.getMainModel(), null);
+    }
+
+    @Test
+    public void testStartBtnOperation() {
+        mainPresenter.removePresenter();
+        assertEquals(mainPresenter.getMainView(), null);
+        mainPresenter.addPresenter(new MainContract.IMainView() {
+            @Override
+            public void onStartBtnClick() {
+            }
+
+            @Override
+            public void onInit() {
+            }
+        });
+        assertNotEquals(mainPresenter.getMainView(), null);
+        mainPresenter.init();
+        mainPresenter.startBtnClick();
+    }
+
+
 }

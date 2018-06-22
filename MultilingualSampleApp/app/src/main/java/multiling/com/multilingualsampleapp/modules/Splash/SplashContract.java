@@ -8,7 +8,7 @@ public class SplashContract {
 
     public interface ISplashView {
 
-        void onSplashComplete();
+        void onSplashComplete(String language);
 
     }
 
@@ -20,9 +20,11 @@ public class SplashContract {
         void removePresenter();
 
         SplashContract.ISplashView getSplashView();
+
+        SplashContract.ISplashModel getSplashModel();
     }
 
-    interface ISplashModel {
-
+    public interface ISplashModel {
+        String getSelectedLanguage();
     }
 }
